@@ -24,4 +24,5 @@ characters = [
 	# leave the program
 	
 # Else:
- # show another quote		
+ # show another quote
+ 		
