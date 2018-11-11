@@ -1,4 +1,5 @@
 # -*-coding: utf8 -*-
+import random
 
 quotes = [
 	"Ecoutez-moi, monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes !",
@@ -16,23 +17,20 @@ characters = [
 	"Kirikou"
 ]
 
-def show_random_quote(my_list):
-	# TODO : get a random number	
-	item = my_list[0]
-	# get a quote from an array
-	return item
-
-user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
+def show_random_item(my_list):
+	rand_numb = random.randint(0, len(my_list)-1)	#radom number
+	item = my_list[rand_numb]								# get a quote from a list
+	return item													#return the item
+	
+def message(character,quote):
+	n_character = character.capitalize()
+	n_quote = quote.capitalize()
+	return "{} a dit : {}".format(n_character, n_quote)
+	
+user_answer = input("Tapez entrée pour connaître une citation ou B pour quitter le programme : ")
 
 while user_answer != "B":
-	print(show_random_quote(quotes))
-	user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")	
-
-for character in characters:
-	n_character = character.capitalize()
-	print(n_character)
-
-
-	print(show_random_quote(quotes))
+	print(message(show_random_item(characters), show_random_item(quotes)))
+	user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme : ")
 	
 	
