@@ -7,40 +7,31 @@ quotes = [
 ]
 
 characters = [
-	"Alvin et les Chipmunks",
+	"alvin et les Chipmunks",
 	"Babar",
-	"Betty Boop",
-	"Calimero",
-	"Casper",
-	"Le chat potté",
+	"betty Boop",
+	"calimero",
+	"casper",
+	"ce chat potté",
 	"Kirikou"
 ]
 
+def show_random_quote(my_list):
+	# TODO : get a random number	
+	item = my_list[0]
+	# get a quote from an array
+	return item
+
 user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")
-# Show random quote
 
+while user_answer != "B":
+	print(show_random_quote(quotes))
+	user_answer = input("Tapez entrée pour connaître une autre citation ou B pour quitter le programme.")	
 
-# If user_ansmwer == "B":
+for character in characters:
+	n_character = character.capitalize()
+	print(n_character)
 
-if user_answer == "B":
-		
-	# leave the program
-	pass
-
-# Else:
-elif user_answer == "C":
-	print("C pas la bonne réponse ! Et G pas d'humour, je c...")
-	
-else:
-	
-	# show another quote
-
-	def show_random_quote(my_list):
-		# get a random number	
-		item = my_list[0]
-		
-		# get a quote from an array
-		return item
 
 	print(show_random_quote(quotes))
 	
