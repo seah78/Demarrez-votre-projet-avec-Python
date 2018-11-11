@@ -20,9 +20,21 @@ characters = [
 # Show random quote
 
 
-# If user_ansmwer is "B":
+# If user_ansmwer == "B":
+
+if user_answer == "B":
+		
 	# leave the program
-	
+	pass
+
+
 # Else:
- # show another quote
+elif user_answer == "C":
+	print("C pas la bonne réponse ! Et G pas d'humour, je c...")
+	
+
+
+else:
+	
+	# show another quote
  		
